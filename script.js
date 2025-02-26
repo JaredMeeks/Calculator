@@ -1,25 +1,35 @@
-let array = [6, 3, 0, 2];
+const display = document.querySelector('#display');
+const buttons = document.querySelectorAll('button');
+let firstInput = null;
+let secondInput = null;
+let firstOperator = null;
+let secondOperator = null;
+let result = null;
 
+let displayValue = '0';
 
-function addition(array) {
-    return array.reduce((a, b) => a + b, 0);
+function displayUpdate() {
+    display.innerText = displayValue;
+    if (displayValue.length > 9) {
+        display.innerText = displayValue.substring(0, 9);
+    }
 }
+displayUpdate();
 
-function subtraction(array) {
-    return array.reduce((a, b) => a - b);
-}
-
-function multiplication(array) {
-    return array.reduce((a, b) => a * b, 1);
-}
-
-function division(array) {
-    return array.reduce((a, b) => {
+function operation(a, b, operator) {
+    if (operator === '+') {
+        return a + b;
+    } else if (operator === '-') {
+        return a - b;
+    } else if (operator === '*') {
+        return a * b;
+    } else if (operator === '/') {
         if (b === 0) {
-            return undefined;
+            return "c'mon...";
         } else {
             return a / b;
         }
-    }).toFixed(9);
+    }
 }
-console.log(division(array));
+
+console.log(operation(4, 0, '/'));
