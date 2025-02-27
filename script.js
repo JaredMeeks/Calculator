@@ -16,7 +16,37 @@ function displayUpdate() {
 }
 displayUpdate();
 
-function operation(a, b, operator) {
+function buttonClick() {
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function() {
+            if (buttons[i].classList.contains())
+        })
+    }
+}
+
+function inputTheOperand(operand) {
+    if (firstInput === null) {
+        if (displayValue === '0' || displayValue === 0) {
+            displayValue = operand;
+        } else if (displayValue === firstInput) {
+            displayValue = operand;
+        } else {
+            displayValue += operand;
+        }
+    } else {
+        if (displayValue === firstInput) {
+            displayValue = operand;
+        } else {
+            displayValue += operand;
+        }
+    }
+}
+
+function inputTheOperator() {
+
+}
+
+function operate(a, b, operator) {
     if (operator === '+') {
         return a + b;
     } else if (operator === '-') {
@@ -32,4 +62,4 @@ function operation(a, b, operator) {
     }
 }
 
-console.log(operation(4, 0, '/'));
+console.log(operate(4, 0, '/'));

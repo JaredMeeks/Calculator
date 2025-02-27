@@ -1,0 +1,98 @@
+* {
+    --operand-color:
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100vh;
+}
+
+.calculator {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: black;
+    width: 100%;
+}
+
+.display-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: gray;
+}
+
+h1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    width: 80%;
+    height: 60px;
+    background-color: lightgray;
+    border-radius: 2px;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: gray;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
+    margin: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#zero {
+    width: 130px;
+    border-radius: 15px;
+}
+
+.decimal {
+    font-size: 2em;
+}
+
+.operand {
+    background-color: lightgray;
+    color: rgb(68, 68, 224);
+}
+
+.operator {
+    background-color: orange;
+}
+
+.equals {
+    background-color: rgb(83, 156, 83);
+}
+
+.clear,
+.pos-neg,
+.percent {
+    background-color: rgb(21, 137, 199);
+}
