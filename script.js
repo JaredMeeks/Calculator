@@ -64,6 +64,9 @@ function evaluate() {
     if (operator === null || firstOperand === null) return;
     secondOperand = parseFloat(displayValue);
     result = operate(firstOperand, operator, secondOperand);
+    if (result % 1 !== 0) { // checks if the result has decimals
+        result = parseFloat(result.toFixed(4)); // rounds to 4 decimal places max
+    }
     displayValue = result.toString();
     firstOperand = result;
     operator = null;
