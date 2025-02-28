@@ -1,12 +1,17 @@
 const display = document.querySelector('#display');
-const buttons = document.querySelectorAll('button');
+const operandButtons = document.querySelectorAll('.operand');
+const operatorButtons = document.querySelectorAll('.operator');
+const allClearButton = document.querySelector('.clear');
+const posOrNegButton = document.querySelector('.pos-neg');
+const equalsButton = document.querySelector('.equals');
+const decimalButton = document.querySelector('.decimal');
 let firstInput = null;
 let secondInput = null;
 let firstOperator = null;
 let secondOperator = null;
 let result = null;
 
-let displayValue = '0';
+let displayValue = '';
 
 function displayUpdate() {
     display.innerText = displayValue;
@@ -16,13 +21,24 @@ function displayUpdate() {
 }
 displayUpdate();
 
-function buttonClick() {
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function() {
-            if (buttons[i].classList.contains())
-        })
-    }
-}
+operandButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        display.innerText = displayValue += button.innerText;
+        displayUpdate();
+    });
+})
+
+operatorButtons.forEach(button => {
+   
+})
+
+// function buttonClick() {
+//     for (let i = 0; i < buttons.length; i++) {
+//         buttons[i].addEventListener('click', function() {
+//             if (buttons[i].classList.contains())
+//         })
+//     }
+// }
 
 function inputTheOperand(operand) {
     if (firstInput === null) {
